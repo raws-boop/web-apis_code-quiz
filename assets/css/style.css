@@ -4,9 +4,10 @@
     --c--offwhite: #edf0f1;
     --c--dblue: #4259a3;
   }
-  
-  /* body container */
-  body {
+/* body as flex container */
+body {
+    display: flex;
+    flex-direction: column;
     background-color: var(--c--bblue);
     line-height: 2rem;
   }
@@ -19,61 +20,71 @@
     justify-content: space-between;
     align-items: center;
     padding: 1%;
+    width: 100vw;
+    margin-bottom: 5rem;
   }
+  
   h1 {
     font-size: 200%;
   }
+  
+  /* logo width and height */
   .logo {
     width: 5rem;
     height: 5rem;
-    transition: all 5s ease 0s;
   }
   
-  .high-score {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 200%;
-    color: var(--c--offwhite);
-    text-decoration: none;
-    margin-right: auto;
-    padding: 1%;
-  }
-  main {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  h2 {
-    font-size: 190%;
-  }
+  /* quiz content section */
   .quiz-start-content {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    margin-top: 10rem;
+    flex-direction: column;
+    margin: 6rem 2rem;
   }
+  
   .wrapper {
     line-height: 2.5rem;
   }
+  
+  /* user info section */
   .user-info {
-    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
   }
   
-  #sign-up,
+  /* form header */
+  .form-h2 {
+    font-size: 2rem;
+  }
+  
+  /* for buttons */
+  button,
+  #submit-score,
   #start-quiz {
-    padding: 1rem;
-    border-radius: 5%;
+    padding: 2%;
+    border-radius: 1.875rem;
     margin-top: 1.5rem;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     background-color: rgb(185, 182, 182);
+    font-size: 1.3rem;
+    outline: none;
   }
   
+  /* button:hover {
+    background-color: var(--c--dblue);
+  } */
+  
+  /* button hover property */
   button:hover,
   .clear:hover,
-  .go-back {
+  .go-back:hover,
+  #start-quiz:hover {
     background-color: var(--c--dblue);
   }
   
@@ -81,17 +92,12 @@
     padding: 0.2rem;
   }
   
-  .show-highscore {
-    margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
+  #start-quiz {
+    padding: 4%;
   }
   
-  .high-score-h1 {
-    width: 100%;
-  }
-  
-  .clear,
+  /* clear and go back button */
+  .clear-data,
   .go-back {
     margin-right: 1rem;
     margin-top: 1rem;
@@ -101,4 +107,43 @@
     padding: 1rem;
     border-radius: 5%;
     font-size: 1rem;
+  }
+  
+  /* question and ans display wrapper */
+  .queAnsDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* keeping for reference */
+  /* .question-answer-display {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 35rem;
+  } */
+  
+  /*  media queries for screen less than 768 */
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 150%;
+    }
+    .queAnsDisplay {
+      margin: 2rem;
+    }
+  }
+  
+  /*  media queries for screen less than 600 */
+  @media screen and (max-width: 600px) {
+    .logo {
+      display: none;
+    }
+  }
+  
+  /*  media queries for screen less than 400 */
+  @media screen and (max-width: 460px) {
+    header {
+      flex-direction: column;
+    }
   }

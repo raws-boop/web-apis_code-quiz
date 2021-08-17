@@ -4,26 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code-Quiz</title>
-    <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script
-      src="https://kit.fontawesome.com/3291b69a63.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
+
   <body>
-    <!-- Header with JS logo. Nav bar contents: High Score and Timer -->
+    <!-- Header with JS logo and Timer -->
     <header class="page-header">
       <img
         class="logo"
-        src="./assets/images/JSQuiz1.jpg"
+        src="./assets/images/quiz_logo.png"
         alt="Logo for Javascript"
       />
-      <a class="high-score" href="highscore.html">View HighScores</a>
-      <h1 class="timer">Timer<span id="timeLeft"></span></h1>
+      <h1>Timer<span id="timer"></span></h1>
     </header>
-    <!-- Main contains one section for the quiz pages-->
+
+    <!-- Main have one section each for quiz startpage, question ans display  and userinfo-->
     <main>
+      <!-- quiz main page -->
       <section class="quiz-start-content">
         <div class="wrapper">
           <h2>Code Quiz</h2>
@@ -35,12 +32,33 @@
           <p>
             For every wrong answer 10 secs will be subtracted from the clock.
           </p>
-          <button id="start-quiz">Star Quiz</button>
+          <button id="start-quiz">Start Quiz</button>
         </div>
       </section>
 
-      <section class="question-answer-display"></section>
-      
+      <!-- section in which questions will be displayed ( h2 and ol for answers and  line h3 correct  answer)-->
+
+      <section class="queAnsDisplay">
+        <div class="question-answer-display"></div>
+      </section>
+
+      <!-- section for user input  -->
+      <!-- div in which Alldone + user score + sumit ur score + when submitted got to HS page -->
       <section class="user-info">
         <form id="form" class="score-form">
-          <h2>All Done!</h2>
+          <h2 class="form-h2">All Done!</h2>
+          <p>Your final score is <span id="final-score"></span></p>
+          <label id="initial">Enter initial:</label>
+          <input
+            type="text"
+            name="initial"
+            id="user-initial"
+            placeholder="GB"
+          />
+          <button id="submit-score" type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

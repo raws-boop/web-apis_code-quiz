@@ -59,8 +59,6 @@
     line-height: 2.5rem;
   }
   .user-info {
-    /* display: flex;
-    flex: 1 1; */
     margin-top: 10rem;
   }
   
@@ -88,13 +86,10 @@
     margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
-    /* align-items: center; */
   }
   
   .high-score-h1 {
     width: 100%;
-    /* text-align: center; */
   }
   
   .clear,
@@ -108,8 +103,3 @@
     border-radius: 5%;
     font-size: 1rem;
   }
-  
-  /* #high-scorelist {
-    display: flex;
-    width: 100%;
-  } */

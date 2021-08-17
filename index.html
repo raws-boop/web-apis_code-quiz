@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code-Quiz</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/3291b69a63.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header with JS logo. Nav bar contents: High Score and Timer -->
+    <header class="page-header">
+      <img
+        class="logo"
+        src="./assets/images/JSQuiz1.jpg"
+        alt="Logo for Javascript"
+      />
+      <a class="high-score" href="highscore.html">View HighScores</a>
+      <h1 class="timer">Timer<span id="timeLeft"></span></h1>
+    </header>
+    <!-- Main contains one section for the quiz pages-->
+    <main>
+      <section class="quiz-start-content">
+        <div class="wrapper">
+          <h2>Code Quiz</h2>
+          <p>
+            Lets play this timed quiz and know how strong your Javascript is
+            !!!!
+          </p>
+          <p>Make sure to answer all questions in given time.</p>
+          <p>
+            For every wrong answer 10 secs will be subtracted from the clock.
+          </p>
+          <button id="start-quiz">Star Quiz</button>
+        </div>
+      </section>
+
+      <section class="question-answer-display"></section>
+      
+      <section class="user-info">
+        <form id="form" class="score-form">
+          <h2>All Done!</h2>

@@ -7,7 +7,7 @@ var questionNumber = 0;
 var timeInterval;
 var timeLeft = 120;
 
-//questions in array of object
+//questions array to pull for quiz
 var questionCollection = [
     {
         question: "JavaScript is a ___ -side programming language.",
@@ -86,20 +86,21 @@ var questionCollection = [
         answer: "for(i=0; i<5; i++)",
     },
 ];
-//to set a timer for every 1sec so this function will be excuted every 1sec
+//create a timer function
 function startTimer() {
     timeInterval = setInterval(function () {
-      timeLeft--;
-      timerEl.textContent = ":" + timeLeft;
-  
-      if (timeLeft === 0) {
-        clearInterval(timeInterval);
-      }
+        timeLeft--;
+        timerEl.textContent = ":" + timeLeft;
+
+        if (timeLeft === 0) {
+            clearInterval(timeInterval);
+        }
     }, 1000);
-  }
-  
-  function displayQuestionAnswer() {
+}
+
+function displayQuestionAnswer() {
     if (questionNumber === 0) {
-      startContentEl.remove();
-      startTimer();
+        startContentEl.remove();
+        startTimer();
     }
+}

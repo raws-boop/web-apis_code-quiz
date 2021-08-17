@@ -112,15 +112,15 @@ function startTimer() {
     if (timeLeft === 0) {
       //if  user not able to finish all que and time is up
       questionAnswerDisplayEl.remove();
-      gotoAlldone();
+      gotoFinish();
       clearInterval(timeInterval);
     }
   }, 1000);
 }
 
 // functions to to be done after user is done with all ques or timer is up
-function gotoAlldone() {
-  //display alldone section
+function gotoFinish() {
+  //display Finish section
   userInfoSectionEl.setAttribute("style", "display: flex");
   //display your score
   showScoreEl.textContent = score;
@@ -166,8 +166,8 @@ function checkUserInput() {
     questionAnswerDisplayEl.lastChild.appendChild(horizontalLineEl);
     questionAnswerDisplayEl.lastChild.appendChild(correctEl);
 
-    //add logic to move to next ques
-    // if last question || timer up -> display alldone section
+    //add logic to move to next question
+    // if last question || timer up -> display Finish section
   } else {
     //console.log("in wrong ");
     questionAnswerDisplayEl.lastChild.appendChild(horizontalLineEl);
@@ -180,14 +180,12 @@ function checkUserInput() {
     }
   }
 
-  // increment que no and remove inner html and if done with all que got to alldone
+  // increment question no and remove inner html and if done with all que got to Finish
   setTimeout(function () {
-    // console.log("inside settime");
     questionNumber++;
     questionAnswerDisplayEl.innerHTML = "";
     if (questionNumber === questionCollection.length) {
-      // console.log("inside settime");
-      gotoAlldone();
+      gotoFinish();
     } else {
       displayQuestionAnswer();
     }
@@ -261,27 +259,6 @@ function displayQuestionAnswer() {
     btnOption4El.addEventListener("click", checkUserInput);
   }
 }
-
-// function displayHighScores() {
-//   //take data from storage
-//   var storageData = JSON.parse(localStorage.getItem("userScores")) || [];
-//   console.log(storageData);
-
-//   //sort it a. -b. () in ascending order b. -a. in descending order
-//   storageData.sort(function (a, b) {
-//     return b.userScore - a.userScore;
-//   });
-//   console.log(storageData);
-//   //create lis for each entry and append it to //highScoreEl;
-
-//   storageData.forEach(function (item) {
-//     var liList = document.createElement("li");
-//     liList.textContent = item.initials + " - " + item.userScore;
-//     console.log(liList.textContent);
-//     highScoreEl.appendChild(liList);
-//   });
-//   //display it on page
-// }
 
 var scoreList = [];
 //to save user info

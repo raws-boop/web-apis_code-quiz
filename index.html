@@ -3,18 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Code-Quiz</title>
+    <title>APIs-Code-Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
-    <!-- Header with JS logo and Timer -->
+    <!-- Header with JS logo. Nav bar contents: High Score and Timer -->
     <header class="page-header">
       <img
-        class="logo"
-        src="./assets/images/quiz_logo.png"
-        alt="Logo for Javascript"
+      class="logo"
+      src="./assets/images/quiz_logo.png"
+      alt="Logo for Javascript"
       />
+      <a class="high-score" href="highscore.html">View HighScores</a>
       <h1>Timer<span id="timer"></span></h1>
     </header>
 
@@ -25,12 +26,13 @@
         <div class="wrapper">
           <h2>Code Quiz</h2>
           <p>
-            Lets play this timed quiz and know how strong your Javascript is
-            !!!!
+            Test your javascript with the timed quiz. Click "Start Quiz" to begin.
           </p>
-          <p>Make sure to answer all questions in given time.</p>
           <p>
-            For every wrong answer 10 secs will be subtracted from the clock.
+            Answer each question as fast as you can.
+          </p>
+          <p>
+            For every wrong answer; 10 seconds will be subtracted from the clock.
           </p>
           <button id="start-quiz">Start Quiz</button>
         </div>
@@ -43,17 +45,17 @@
       </section>
 
       <!-- section for user input  -->
-      <!-- div in which Alldone + user score + sumit ur score + when submitted got to HS page -->
+      <!-- div in which Finish + user score + sumit ur score + when submitted got to HS page -->
       <section class="user-info">
         <form id="form" class="score-form">
-          <h2 class="form-h2">All Done!</h2>
+          <h2 class="form-h2">Time's Up!</h2>
           <p>Your final score is <span id="final-score"></span></p>
-          <label id="initial">Enter initial:</label>
+          <label id="initial">Enter initials:</label>
           <input
             type="text"
             name="initial"
             id="user-initial"
-            placeholder="GB"
+            placeholder="RH"
           />
           <button id="submit-score" type="submit">Submit</button>
         </form>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=.90" />
+    <title>HighSore</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/3291b69a63.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Header with JS logo. Nav bar contents: High Score  -->
+    <header class="page-header">
+      <img
+      class="logo"
+      src="./assets/images/quiz_logo.png"
+      alt="Logo for Javascript"
+      />
+      <h1>HighScore</h1>
+    </header>
+    <main>
+      <!-- section for displaying scores in desending order  with go back and  and clear button-->
+      <section class="show-highscore">
+        <h1 class="high-score-h1">HighScore<h1>
+        <ul id="high-scorelist"></ul> 
+        <a href="index.html"><button class="go-back">Go Back</button></a>
+        <button class="clear-data">Clear HighScores</button>  
+      </section>
+    </main>
+    <script src="./assets/js/scores.js"></script>
+  </body>
+</html>
